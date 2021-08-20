@@ -394,7 +394,9 @@
   outline-color: transparent;
 }
 
-.btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus {
+.next.active.focus, .next.active:focus, .next.focus, .next:active.focus, .next:active:focus, .next:focus, 
+.prev.active.focus, .prev.active:focus, .prev.focus, .prev:active.focus, .prev:active:focus, .prev:focus,
+.back.active.focus, .back.active:focus, .back.focus, .back:active.focus, .back:active:focus, .back:focus  {
   outline: 0;
   box-shadow: none;
 }
