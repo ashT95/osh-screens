@@ -123,7 +123,7 @@ export default function Background() {
                 }}
               >
                 <Fade duration={1000} delay={2700}>
-                  <video autoPlay="true" loop="true" src="assets/icon-bg-start-here.webm.mov">
+                  <video autoPlay="true" loop="true" src={glow.mov}>
                     
                     </video>
                 </Fade>
