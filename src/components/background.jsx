@@ -20,7 +20,7 @@ import UseTimer from "./useTimer";
 import Fade from "react-reveal/Fade";
 import Zoom from "react-reveal/Zoom";
 import IconGlow from "./assets/icon-bg-start-here.svg";
-import glow from "./assets/icon-bg-start-here.webm";
+import glow from "./assets/icon-bg-start-here.mov";
 
 const buttons = [
   { id: "num1", img: IconOne, mod: 1 },
@@ -123,7 +123,7 @@ export default function Background() {
                 }}
               >
                 <Fade duration={1000} delay={2700}>
-                  <video autoPlay="true" loop="true" src={glow.mov}>
+                  <video autoPlay="true" loop="true" src={glow}>
                     
                     </video>
                 </Fade>
