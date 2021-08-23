@@ -17,8 +17,10 @@ import startButton from "./assets/button-start.svg";
 import startHere from "./assets/start-here.png";
 import CustomModal from "./customModal";
 import UseTimer from "./useTimer";
-import Fade from 'react-reveal/Fade';
+import Fade from "react-reveal/Fade";
 import Zoom from "react-reveal/Zoom";
+import IconGlow from "./assets/icon-bg-start-here.svg";
+import glow from "./assets/icon-bg-start-here.webm";
 
 const buttons = [
   { id: "num1", img: IconOne, mod: 1 },
@@ -31,8 +33,6 @@ const buttons = [
   { id: "num8", img: IconEight, mod: 8 },
   { id: "num9", img: IconNine, mod: 9 },
 ];
-
-
 
 export default function Background() {
   const [active, setActive] = useState(null);
@@ -47,14 +47,16 @@ export default function Background() {
 
   //console.log(active);
   useEffect(() => {
-    if (timer > 0) {
+    if (timer > 0 ){
       setAlreadyClicked(temp);
     }
+    
     if (timer === 0) {
       setAlreadyClicked([]);
       setActive(null);
     }
   }, [timer]);
+  
 
   function start() {
     timer !== 0 && setActive(null);
@@ -100,24 +102,41 @@ export default function Background() {
             <img src={IconDotLine} id="IconSetup" />
             <img src={startHere} id="startHereImage" />
 
-            {active !== null && <h1> {console.log(active)} </h1>}
-       
+            {active !== null && <h1> {console.log()} </h1>}
+
             <div className="button-div">
-    
-                {buttons.map((button) => (
-            
-                  <CustomButton
-                    id={button.id}
-                    img={button.img}
-                    mod={button.mod}
-                    active={active === button.id ? true : false}
-                    setActive={(id) => setActive(id)}
-                    seen={alreadyClicked}
-                    isModalOpen={active !== null ? true : false}
-                  />
-       
-                ))}
- 
+              <div
+                className="iconGlow"
+                style={{
+                  display: !(
+                    alreadyClicked.includes("num1") ||
+                    alreadyClicked.includes("num2") ||
+                    alreadyClicked.includes("num3") ||
+                    alreadyClicked.includes("num4") ||
+                    alreadyClicked.includes("num5") ||
+                    alreadyClicked.includes("num6") ||
+                    alreadyClicked.includes("num7") ||
+                    alreadyClicked.includes("num8") ||
+                    alreadyClicked.includes("num9") 
+                  ) 
+                    ? "block"
+                    : "none",
+                }}
+              >
+                <video src={glow} autoPlay="true" loop="true" />
+              </div>
+
+              {buttons.map((button) => (
+                <CustomButton
+                  id={button.id}
+                  img={button.img}
+                  mod={button.mod}
+                  active={active === button.id ? true : false}
+                  setActive={(id) => setActive(id)}
+                  seen={alreadyClicked}
+                  isModalOpen={active !== null ? true : false}
+                />
+              ))}
             </div>
           </div>
         )}
@@ -131,7 +150,6 @@ export default function Background() {
           handleNextClick={handleNext}
           handleBack={handleBack}
         />
-
       </div>
     </div>
   );

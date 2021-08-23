@@ -108,6 +108,12 @@
   position: fixed;
 }
 
+.iconGlow{
+  position:absolute;
+  bottom: 605px;
+  left: 330px;
+  }
+
 #num1 {
   position: absolute;
   bottom: 610px;
@@ -214,16 +220,6 @@
   height: 100px;
   padding: 0px;
   margin: 0px;
-}
-
-.glow{
-  position: absolute;
-  top:50%;
-  left:50%;
-  transform: translate(-50%, -50%);
-
-  background-color: transparent;
-  background-position: center;
 }
 
 .active {
