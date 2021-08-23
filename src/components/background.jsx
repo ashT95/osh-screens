@@ -20,7 +20,7 @@ import UseTimer from "./useTimer";
 import Fade from "react-reveal/Fade";
 import Zoom from "react-reveal/Zoom";
 import IconGlow from "./assets/icon-bg-start-here.svg";
-import glow from "./assets/icon-bg-start-here.webm.mov";
+import glow from "./assets/icon-bg-start-here.webm";
 
 const buttons = [
   { id: "num1", img: IconOne, mod: 1 },
