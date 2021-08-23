@@ -52,7 +52,8 @@ export default function CustomButton(props) {
                 : "glow"
             }
           >
-            <img src={img} />
+            
+            <img src={img}  />
 
     
 

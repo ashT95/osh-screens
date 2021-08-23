@@ -47,16 +47,15 @@ export default function Background() {
 
   //console.log(active);
   useEffect(() => {
-    if (timer > 0 ){
+    if (timer > 0) {
       setAlreadyClicked(temp);
     }
-    
+
     if (timer === 0) {
       setAlreadyClicked([]);
       setActive(null);
     }
   }, [timer]);
-  
 
   function start() {
     timer !== 0 && setActive(null);
@@ -117,13 +116,16 @@ export default function Background() {
                     alreadyClicked.includes("num6") ||
                     alreadyClicked.includes("num7") ||
                     alreadyClicked.includes("num8") ||
-                    alreadyClicked.includes("num9") 
-                  ) 
+                    alreadyClicked.includes("num9")
+                  )
                     ? "block"
                     : "none",
                 }}
               >
-                <video src={glow} autoPlay="true" loop="true" />
+                <Fade duration={1000} delay={2700}>
+                  <video src={glow} autoPlay="true" loop="true">
+                    </video>
+                </Fade>
               </div>
 
               {buttons.map((button) => (
