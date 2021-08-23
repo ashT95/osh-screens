@@ -303,7 +303,7 @@
 }
 
 #custom-body {
-  position: absolute;
+  position: fixed;
   top: 200px;
   left: 4.5px;
 }
