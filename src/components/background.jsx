@@ -123,7 +123,8 @@ export default function Background() {
                 }}
               >
                 <Fade duration={1000} delay={2700}>
-                  <video src={glow} autoPlay="true" loop="true">
+                  <video className="glowVideo" autoPlay="true" loop="true" source type ="video/webm" src={glow}>
+                    
                     </video>
                 </Fade>
               </div>
