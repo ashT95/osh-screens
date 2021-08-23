@@ -305,7 +305,7 @@
 #custom-body {
   position: fixed;
   top: 200px;
-  left: 4.5px;
+  left: 5px;
 }
 
 .next, .next:active, .next:active {
@@ -416,8 +416,8 @@
 }
 
 .lineTitle {
-  position: absolute;
-  top: 13.3%;
+  position: fixed;
+  top: 13.2%;
   left: 50.5%;
   transform: translate(-50%, -50%);
 }
@@ -510,5 +510,5 @@
   line-height: 133%;
 }
 
-/*animations */
+
 
