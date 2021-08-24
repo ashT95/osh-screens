@@ -18,9 +18,9 @@ import startHere from "./assets/start-here.png";
 import CustomModal from "./customModal";
 import UseTimer from "./useTimer";
 import Fade from "react-reveal/Fade";
-import Zoom from "react-reveal/Zoom";
 import IconGlow from "./assets/icon-bg-start-here.svg";
 import glow from "./assets/icon-bg-start-here.webm";
+
 
 const buttons = [
   { id: "num1", img: IconOne, mod: 1 },
@@ -84,6 +84,7 @@ export default function Background() {
       <div className="Background">
         <img
           src={backgroundText}
+          alt="backgroundText"
           style={{ display: active !== null ? "none" : "block" }}
           id={timer !== 0 ? "homeBackText" : "startBackText"}
         />
@@ -93,19 +94,19 @@ export default function Background() {
           onClick={start}
           style={{ display: timer !== 0 ? "none" : "block" }}
         >
-          <img src={startButton} />
+          <img src={startButton} alt="startButton" />
         </Button>
 
         {timer !== 0 && (
           <div>
-            <img src={IconDotLine} id="IconSetup" />
-            <img src={startHere} id="startHereImage" />
+            <img src={IconDotLine} id="IconSetup" alt="IconBackgroundDotLine" />
+            <img src={startHere} id="startHereImage" alt="startHereImage" />
 
             {active !== null && <h1> {console.log()} </h1>}
 
             <div className="button-div">
               <div
-                className="iconGlow"
+              className="iconGlow"
                 style={{
                   display: !(
                     alreadyClicked.includes("num1") ||
@@ -123,9 +124,9 @@ export default function Background() {
                 }}
               >
                 <Fade duration={1000} delay={2700}>
-                  <video autoPlay="true" loop="true" src={glow}>
-                    
-                    </video>
+                  <video autoPlay="true" loop="true" >
+                    <source src={glow} type="video/webm" />
+                  </video>
                 </Fade>
               </div>
 

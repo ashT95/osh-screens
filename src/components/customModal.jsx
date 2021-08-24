@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import reactDom from "react-dom";
 import Modal from "react-bootstrap/Modal";
 import prevButton from "./assets/button-prev.svg";
 import nextButton from "./assets/button-next.svg";
@@ -69,12 +68,12 @@ export default function CustomModal(props) {
             <div className="modalID">
               <img
                 src={modals[parseInt(id.replace("num", "")) - 1].img}
-                id="custom-body"
+                id="custom-body" alt="contentImage"
               />
             </div>
 
             <div className="modalIcon">
-              <img src={modals[parseInt(id.replace("num", "")) - 1].iconImg} />
+              <img src={modals[parseInt(id.replace("num", "")) - 1].iconImg} alt="iconImage" />
             </div>
 
             <div className="photoCaption">
@@ -122,7 +121,7 @@ export default function CustomModal(props) {
           <Modal.Footer>
             {parseInt(id.replace("num", "")) !== 1 && (
               <Button className="prev" onClick={() => handlePrevClick()}>
-                <img src={prevButton} />
+                <img src={prevButton} alt="previousButton" />
               </Button>
             )}
 
@@ -132,7 +131,7 @@ export default function CustomModal(props) {
                 className="next"
                 onClick={() => handleNextClick()}
               >
-                <img src={nextButton} />
+                <img src={nextButton} alt="nextButton"/>
               </Button>
             )}
 
@@ -141,7 +140,7 @@ export default function CustomModal(props) {
               className="back"
               onClick={() => handleBack()}
             >
-              <img src={backButton} />
+              <img src={backButton} alt="backButton" />
             </Button>
           </Modal.Footer>
         </Modal>

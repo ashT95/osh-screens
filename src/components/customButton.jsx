@@ -4,9 +4,7 @@ import "./background.css";
 import Checkmark from "./assets/icon-check-mark.svg";
 import Fade from "react-reveal/Fade";
 import Bounce from "react-reveal/Bounce";
-import IconGlow from "./assets/icon-bg-start-here.svg";
-import glow from "./assets/icon-bg-start-here.webm";
-import { useEffect } from "react";
+
 
 export default function CustomButton(props) {
   const { id, img, active, setActive, seen, mod, isModalOpen} = props;
@@ -53,7 +51,7 @@ export default function CustomButton(props) {
             }
           >
             
-            <img src={img}  />
+            <img src={img} alt="iconImage" />
 
     
 
@@ -67,7 +65,7 @@ export default function CustomButton(props) {
               }}
             >
               <Bounce duration={1000}>
-                <img src={Checkmark} alt="checked" />
+                <img src={Checkmark} alt="iconChecked" />
               </Bounce>
             </div>
           </button>
