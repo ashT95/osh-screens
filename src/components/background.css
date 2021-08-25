@@ -83,7 +83,6 @@
   bottom: 260px;
 }
 
-
 #homeBackText {
   position: absolute;
   align-content: center;
@@ -108,11 +107,11 @@
   position: fixed;
 }
 
-.iconGlow{
-  position:absolute;
+.iconGlow {
+  position: absolute;
   bottom: 605px;
   left: 330px;
-  }
+}
 
 #num1 {
   position: absolute;
@@ -304,11 +303,13 @@
   left: 4.5px;
 }
 
-.next, .next:active, .next:active {
+.next,
+.next:active,
+.next:active {
   background-color: transparent;
   border-color: transparent;
   position: fixed;
-  outline:none;
+  outline: 0;
   box-shadow: none;
   bottom: -6%;
   left: 73%;
@@ -319,10 +320,12 @@
   height: 100px;
 }
 
-.prev, .prev:active, .prev:focus {
+.prev,
+.prev:active,
+.prev:focus {
   background-color: transparent;
   border-color: transparent;
-  outline:none;
+  outline: 0;
   box-shadow: none;
   position: fixed;
   bottom: -6%;
@@ -334,12 +337,13 @@
   height: 100px;
 }
 
-
-.back, .back:active, .back:focus {
+.back,
+.back:active,
+.back:focus {
   position: fixed;
   background-color: transparent;
   border: none;
-  outline:none;
+  outline: 0;
   box-shadow: none;
   width: 470px;
   height: 80px;
@@ -349,7 +353,6 @@
   margin: 0px;
   padding: 10px;
 }
-
 
 .checkButton {
   position: absolute;
@@ -363,41 +366,62 @@
   position: absolute;
   background-color: transparent;
   border: none;
-  transition: all 0.3s ease 0s;
+  outline: 0;
+  box-shadow: none;
   left: 280px;
   bottom: 110px;
   width: 510px;
   height: 130px;
 }
 
-.btn-primary-outline {
-  background-color: transparent;
-  border-color: transparent;
-  outline-color: transparent;
-  outline-style: hidden;
-}
-
-.btn-primary{
-  background-color: transparent;
-  border-color: transparent;
-  outline-color: transparent;
-  outline-style: hidden;
-}
-
-.btn-primary:focus, .btn-primary:active{
-  background-color: transparent;
-  border-color: transparent;
-  outline-color: transparent;
-}
-
-.next.active.focus, .next.active:focus, .next.focus, .next:active.focus, .next:active:focus, .next:focus, 
-.prev.active.focus, .prev.active:focus, .prev.focus, .prev:active.focus, .prev:active:focus, .prev:focus,
-.back.active.focus, .back.active:focus, .back.focus, .back:active.focus, .back:active:focus, .back:focus  {
-  outline: 0;
-  box-shadow: none;
-}
-
-.btn-primary.active.focus, .btn-primary.active:focus, .btn-primary.focus, .btn-primary:active.focus, .btn-primary:active:focus, .btn-primary:focus, .btn-primary:hover {
+.next.active.focus,
+.next.active:focus,
+.next.focus,
+.next:active.focus,
+.next:active:focus,
+.next:focus,
+.next:hover,
+.next.hover,
+.next:active:hover,
+.next.active:hover,
+.next.focus:hover,
+.next:focus:hover,
+.prev.active.focus,
+.prev.active:focus,
+.prev.focus,
+.prev:active.focus,
+.prev:active:focus,
+.prev:focus,
+.prev:hover,
+.prev.hover,
+.prev:active:hover,
+.prev.active:hover,
+.prev.focus:hover,
+.prev:focus:hover,
+.back.active.focus,
+.back.active:focus,
+.back.focus,
+.back:active.focus,
+.back:active:focus,
+.back:focus,
+.back:hover,
+.back.hover,
+.back:active:hover,
+.back.active:hover,
+.back.focus:hover,
+.back:focus:hover,
+.start-btn.active.focus,
+.start-btn.active:focus,
+.start-btn.focus,
+.start-btn:active.focus,
+.start-btn:active:focus,
+.start-btn:focus,
+.start-btn:hover,
+.start-btn.hover,
+.start-btn:active:hover,
+.start-btn.active:hover,
+.start-btn.focus:hover,
+.start-btn:focus:hover {
   outline: 0;
   box-shadow: none;
 }
@@ -423,7 +447,7 @@
   color: #382b18;
   font-size: 72px;
   line-height: 133%;
-  padding-top:1%;
+  padding-top: 1%;
   padding-bottom: 4%;
 }
 
@@ -505,5 +529,3 @@
   transform: translate(-50%, -50%);
   line-height: 133%;
 }
-
-

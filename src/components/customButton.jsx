@@ -5,13 +5,9 @@ import Checkmark from "./assets/icon-check-mark.svg";
 import Fade from "react-reveal/Fade";
 import Bounce from "react-reveal/Bounce";
 
-
 export default function CustomButton(props) {
-  const { id, img, active, setActive, seen, mod, isModalOpen} = props;
+  const { id, img, active, setActive, seen, mod, isModalOpen } = props;
   const [alreadyClicked, setAlreadyClicked] = useState(false);
-
-
-  
 
   function handleClick() {
     setActive(id);
@@ -23,14 +19,8 @@ export default function CustomButton(props) {
     setActive(id);
   }
 
-
   return (
-    
-
     <div class="customButton">
-
-
-
       <div>
         <Fade duration={1000} delay={mod * 300}>
           <button
@@ -50,10 +40,7 @@ export default function CustomButton(props) {
                 : "glow"
             }
           >
-            
             <img src={img} alt="iconImage" />
-
-    
 
             <div
               className="checkButton"

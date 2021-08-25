@@ -12,7 +12,6 @@ import IconSix from "./assets/icon-06.svg";
 import IconSeven from "./assets/icon-07.svg";
 import IconEight from "./assets/icon-08.svg";
 import IconNine from "./assets/icon-09.svg";
-import Button from "react-bootstrap/Button";
 import startButton from "./assets/button-start.svg";
 import startHere from "./assets/start-here.png";
 import CustomModal from "./customModal";
@@ -89,13 +88,13 @@ export default function Background() {
           id={timer !== 0 ? "homeBackText" : "startBackText"}
         />
 
-        <Button
+        <button
           className="start-btn"
           onClick={start}
           style={{ display: timer !== 0 ? "none" : "block" }}
         >
           <img src={startButton} alt="startButton" />
-        </Button>
+        </button>
 
         {timer !== 0 && (
           <div>

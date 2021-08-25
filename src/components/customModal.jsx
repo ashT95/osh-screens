@@ -3,7 +3,6 @@ import Modal from "react-bootstrap/Modal";
 import prevButton from "./assets/button-prev.svg";
 import nextButton from "./assets/button-next.svg";
 import backButton from "./assets/button-back.svg";
-import Button from "react-bootstrap/Button";
 import content01 from "./assets/image-content-01.jpg";
 import content02 from "./assets/image-content-02.jpg";
 import content03 from "./assets/image-content-03.jpg";
@@ -47,9 +46,7 @@ export default function CustomModal(props) {
 
   return (
     <div>
-
       {id !== null && (
-
         <Modal
           {...props}
           size="lg"
@@ -68,12 +65,16 @@ export default function CustomModal(props) {
             <div className="modalID">
               <img
                 src={modals[parseInt(id.replace("num", "")) - 1].img}
-                id="custom-body" alt="contentImage"
+                id="custom-body"
+                alt="contentImage"
               />
             </div>
 
             <div className="modalIcon">
-              <img src={modals[parseInt(id.replace("num", "")) - 1].iconImg} alt="iconImage" />
+              <img
+                src={modals[parseInt(id.replace("num", "")) - 1].iconImg}
+                alt="iconImage"
+              />
             </div>
 
             <div className="photoCaption">
@@ -120,32 +121,23 @@ export default function CustomModal(props) {
 
           <Modal.Footer>
             {parseInt(id.replace("num", "")) !== 1 && (
-              <Button className="prev" onClick={() => handlePrevClick()}>
+              <button className="prev" onClick={() => handlePrevClick()}>
                 <img src={prevButton} alt="previousButton" />
-              </Button>
+              </button>
             )}
 
             {parseInt(id.replace("num", "")) !== 9 && (
-              <Button
-                variant="primary"
-                className="next"
-                onClick={() => handleNextClick()}
-              >
-                <img src={nextButton} alt="nextButton"/>
-              </Button>
+              <button className="next" onClick={() => handleNextClick()}>
+                <img src={nextButton} alt="nextButton" />
+              </button>
             )}
 
-            <Button
-              variant="primary"
-              className="back"
-              onClick={() => handleBack()}
-            >
+            <button className="back" onClick={() => handleBack()}>
               <img src={backButton} alt="backButton" />
-            </Button>
+            </button>
           </Modal.Footer>
         </Modal>
       )}
-
     </div>
   );
 }
