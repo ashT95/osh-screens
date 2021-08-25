@@ -53,11 +53,13 @@ export default function Background() {
     if (timer === 0) {
       setAlreadyClicked([]);
       setActive(null);
+      setStartPage(false);
     }
   }, [timer]);
 
   function start() {
-    timer !== 0 && setActive(null);
+    setActive(null);
+    setStartPage(true);
   }
 
   function handlePrev() {
@@ -85,18 +87,19 @@ export default function Background() {
           src={backgroundText}
           alt="backgroundText"
           style={{ display: active !== null ? "none" : "block" }}
-          id={timer !== 0 ? "homeBackText" : "startBackText"}
+          id={timer !== 0 && startpage? "homeBackText" : "startBackText"}
         />
 
         <button
           className="start-btn"
           onClick={start}
-          style={{ display: timer !== 0 ? "none" : "block" }}
+          style={{ display: timer !== 0 && startpage ? "none" : "block" }}
         >
           <img src={startButton} alt="startButton" />
         </button>
 
-        {timer !== 0 && (
+
+        {timer !== 0 && startpage && (
           <div>
             <img src={IconDotLine} id="IconSetup" alt="IconBackgroundDotLine" />
             <img src={startHere} id="startHereImage" alt="startHereImage" />
