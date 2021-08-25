@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 
+
+
 const useTimer = (startTime) => {
   const [timer, setTimer] = useState(startTime);
   useEffect(() => {
@@ -12,12 +14,7 @@ const useTimer = (startTime) => {
       setTimer(startTime);
     };
     const events = [
-      "load",
-      "mousemove",
-      "mousedown",
       "click",
-      "scroll",
-      "keypress"
     ];
     for (let i in events) {
       window.addEventListener(events[i], resetTimeout);
