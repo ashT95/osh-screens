@@ -107,6 +107,13 @@
   position: fixed;
 }
 
+#creditImg{
+  position: fixed;
+  transform: translate(-50%, -50%);
+  top: 95.65%;
+  left:50%;
+}
+
 .iconGlow {
   position: absolute;
   bottom: 605px;
@@ -282,6 +289,7 @@
   transform: translate(-50%, -50%);
 }
 
+
 .modal-body {
   background-color: transparent;
   border: none;
@@ -421,7 +429,19 @@
 .start-btn:active:hover,
 .start-btn.active:hover,
 .start-btn.focus:hover,
-.start-btn:focus:hover {
+.start-btn:focus:hover,
+.popupYes.active.focus,
+.popupYes.active:focus,
+.popupYes.focus,
+.popupYes:active.focus,
+.popupYes:active:focus,
+.popupYes:focus,
+.popupYes:hover,
+.popupYes.hover,
+.popupYes:active:hover,
+.popupYes.active:hover,
+.popupYes.focus:hover,
+.popupYes:focus:hover  {
   outline: 0;
   box-shadow: none;
 }
@@ -529,3 +549,41 @@
   transform: translate(-50%, -50%);
   line-height: 133%;
 }
+
+
+.popup-content {
+  background-color: transparent;
+  border: none;
+  position: fixed;
+  background-image: url("assets/bg-session-check.png");
+  background-repeat: no-repeat;
+  top:75%;
+  left:71%;
+  transform: translate(-50%, -50%);
+}
+
+.popupYes{
+  outline: 0;
+  box-shadow: none;
+  background: none;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  position: fixed;
+}
+
+
+#sessioncheck-btn{
+  top:0%;
+  left:0.5%;
+ width: 450px;
+ height: 450px;
+  outline: 0;
+  box-shadow: none;
+  background: none;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  position: fixed;
+}
+

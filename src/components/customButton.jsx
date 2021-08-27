@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import reactDom from "react-dom";
 import "./background.css";
 import Checkmark from "./assets/icon-check-mark.svg";
 import Fade from "react-reveal/Fade";

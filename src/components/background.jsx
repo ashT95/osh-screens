@@ -17,9 +17,9 @@ import startHere from "./assets/start-here.png";
 import CustomModal from "./customModal";
 import UseTimer from "./useTimer";
 import Fade from "react-reveal/Fade";
-import IconGlow from "./assets/icon-bg-start-here.svg";
+import creditImg from "./assets/credit-IMLS.svg";
 import glow from "./assets/icon-bg-start-here.webm";
-
+import PopupModal from "./popupModal";
 
 const buttons = [
   { id: "num1", img: IconOne, mod: 1 },
@@ -37,10 +37,11 @@ export default function Background() {
   const [active, setActive] = useState(null);
   const [startpage, setStartPage] = useState(false);
   const [alreadyClicked, setAlreadyClicked] = useState([]);
+  const [showModal, setShowModal] = useState(true);
 
   let content = require("./data.json");
 
-  const timer = UseTimer(content.countdownTimer);
+  const timer =  UseTimer(content.resetTimer);
   var temp = alreadyClicked;
   temp.push(active);
 
@@ -80,14 +81,19 @@ export default function Background() {
     setActive(null);
   }
 
+  function handleYes() {
+    setShowModal(false);
+  }
+
+
   return (
     <div className="HomePage">
-      <div className="Background">
+      <div className="Background" >
         <img
           src={backgroundText}
           alt="backgroundText"
           style={{ display: active !== null ? "none" : "block" }}
-          id={timer !== 0 && startpage? "homeBackText" : "startBackText"}
+          id={timer !== 0 && startpage ? "homeBackText" : "startBackText"}
         />
 
         <button
@@ -98,17 +104,16 @@ export default function Background() {
           <img src={startButton} alt="startButton" />
         </button>
 
-
         {timer !== 0 && startpage && (
           <div>
             <img src={IconDotLine} id="IconSetup" alt="IconBackgroundDotLine" />
             <img src={startHere} id="startHereImage" alt="startHereImage" />
+            <img src={active !== null ? null : creditImg } id="creditImg"/>
 
-            {active !== null && <h1> {console.log()} </h1>}
 
             <div className="button-div">
               <div
-              className="iconGlow"
+                className="iconGlow"
                 style={{
                   display: !(
                     alreadyClicked.includes("num1") ||
@@ -126,7 +131,7 @@ export default function Background() {
                 }}
               >
                 <Fade duration={1000} delay={2700}>
-                  <video autoPlay="true" loop="true" >
+                  <video autoPlay="true" loop="true">
                     <source src={glow} type="video/webm" />
                   </video>
                 </Fade>
@@ -147,16 +152,37 @@ export default function Background() {
           </div>
         )}
       </div>
+      <div className="popup-div" >
+        <PopupModal
+          id={active}
+          show={
+            startpage &&
+            active !== null &&
+            timer <= content.popupTimer &&
+            setShowModal
+              ? true
+              : false
+          }
+          setShowModal={setShowModal}
+          handleYesClick={handleYes}
+        />
 
-      <div className="modal-div">
+        {console.log(timer)}
+      </div>
+      
+      <div className="modal-div" >
         <CustomModal
           id={active}
           show={active !== 0 ? true : false}
           handlePrevClick={handlePrev}
           handleNextClick={handleNext}
           handleBack={handleBack}
+          style = {{ zIndex : timer <= content.popupTimer ? '1' : null }}
         />
       </div>
+
+ 
+     
     </div>
   );
 }

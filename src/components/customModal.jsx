@@ -52,6 +52,7 @@ export default function CustomModal(props) {
           size="lg"
           aria-labelledby="contained-modal-title-vcenter"
           centered
+     
         >
           <Modal.Header>
             <h1> </h1>

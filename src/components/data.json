@@ -1,6 +1,7 @@
 
 {
-    "countdownTimer" : "60",
+    "resetTimer" : "40",
+    "popupTimer" : "10",
 
     "num1" : {
         "photoName": "",
@@ -23,7 +24,8 @@
         "content": "On this map, Marechkawick is marked by a building called a Big House. Big Houses are homes as well as centers of government and religion, and are still built today. They symbolize the world the turtle created. Several hundred people lived in Marechkawick in the 1630s. ",
         "quoteDutch":"",
         "quoteEng":"" ,
-        "citationName":"" 
+        "citationName":"",
+        "citationYear":""
     },
 
      "num3": {
