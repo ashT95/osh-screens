@@ -167,7 +167,6 @@ export default function Background() {
           handleYesClick={handleYes}
         />
 
-        {console.log(timer)}
       </div>
       
       <div className="modal-div" >
