@@ -345,6 +345,20 @@
   height: 100px;
 }
 
+.goNext {
+  position: fixed;
+  height: 1500px;
+  width: 500px;
+  transform: translate(-400px, -1500px);
+}
+
+.goPrev {
+  position: fixed;
+  height: 1500px;
+  width: 500px;
+  transform: translate(-960px, -1500px);
+}
+
 .back,
 .back:active,
 .back:focus {
